@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 83,
+  "id": 89,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -95,10 +95,12 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:695",
           "format": "KBs",
           "show": true
         },
         {
+          "$$hashKey": "object:696",
           "format": "KBs",
           "show": false
         }
@@ -200,9 +202,9 @@
     "list": [
       {
         "current": {
-        "selected": false,
-        "text": "All",
-        "value": "$__all"
+          "selected": true,
+          "text": "TECH9-CU-03:80",
+          "value": "TECH9-CU-03:80"
         },
         "datasource": {
           "type": "prometheus",
@@ -235,14 +237,14 @@
           "type": "prometheus",
           "uid": "El1Mnc6nk"
         },
-        "definition": "label_values(stream_bitrate, name)",
+        "definition": "label_values(stream_bitrate{instance=~\"$instance\"}, name)",
         "hide": 0,
         "includeAll": true,
         "label": "channel",
         "multi": false,
         "name": "channel",
         "options": [],
-        "query": "label_values(stream_bitrate, name)",
+        "query": "label_values(stream_bitrate{instance=~\"$instance\"}, name)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -262,6 +264,6 @@
   "timezone": "",
   "title": "Flussonic-Dash",
   "uid": "ebzerqwerty",
-  "version": 4,
+  "version": 3,
   "weekStart": ""
 }
